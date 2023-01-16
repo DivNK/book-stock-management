@@ -5,7 +5,7 @@ class SrchbkauthorController < ApplicationController
        if(a)
         render json: "Enter Author"
        end
-        bk = Book.find_by('bookAuthor': params[:bookAuthor])
+        bk = Book.where(:bookAuthor => params[:bookAuthor])
         puts "************************************"
         puts !bk.nil?
         if(!bk.nil?)

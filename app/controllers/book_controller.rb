@@ -38,7 +38,7 @@ def update
     render json: "data updated"
 end
 def destroy 
-    p = Property.find(params[:id])
+    p = Book.find(params[:id])
     p.destroy
     render json: "Data Deleted"
 end
